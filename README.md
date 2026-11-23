@@ -108,8 +108,4 @@ Then use the **Passports** section in the web UI to browse the production timeli
 
 **Not executed:** Fabric peer/network deployment, CA enrollment, multi-organization endorsement, MVCC, Fabric Gateway SDK compilation against downloaded dependencies, cryptographic identity verification and end-to-end distributed network tests. See [docs/TEST_REPORT.md](docs/TEST_REPORT.md) for the earlier domain results and [docs/API_TEST_REPORT.md](docs/API_TEST_REPORT.md) for API/web tests.
 
-## Research background
-
-The semantic model discussed in `paper/article.tex` connects product provenance, materials, techniques, production activities and artisan contributions, with suggested alignments to PROV-O, CIDOC CRM and CrO. The implementation stores JSON on the ledger; a live RDF knowledge graph and ontology reasoner are **not implemented**.
-
 MIT licensed. See [LICENSE](LICENSE).
