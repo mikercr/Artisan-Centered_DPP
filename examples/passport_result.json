@@ -1,0 +1,44 @@
+{
+  "id": "vase-023",
+  "name": "Hand-thrown ceramic vase",
+  "category": "ceramics",
+  "status": "published",
+  "activities": [
+    {
+      "id": "shaping-17",
+      "stage": "shaping",
+      "technique": "wheel throwing",
+      "artisans": [
+        {
+          "id": "artisan-04",
+          "alias": "Ana",
+          "role": "potter"
+        }
+      ],
+      "materials": [
+        {
+          "lotId": "clay-batch-08",
+          "quantityGrams": 800
+        }
+      ]
+    },
+    {
+      "id": "firing-09",
+      "stage": "firing",
+      "technique": "kiln firing",
+      "artisans": [
+        {
+          "id": "artisan-05",
+          "role": "kiln operator"
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "clay-batch-08",
+      "materialType": "red clay",
+      "originRegion": "Alentejo, Portugal"
+    }
+  ]
+}

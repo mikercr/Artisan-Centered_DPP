@@ -1,0 +1,25 @@
+{
+  "peerEndpoint": "dns:///localhost:7051",
+  "tlsServerName": "peer0.org1.example.com",
+  "tlsCAPath": "/path/to/peer/tls/ca.crt",
+  "channel": "mychannel",
+  "chaincode": "acdpp",
+  "profiles": [
+    {
+      "id": "producer",
+      "label": "Workshop producer",
+      "mspId": "Org1MSP",
+      "role": "producer",
+      "certPath": "/path/to/producer/signcert.pem",
+      "keyPath": "/path/to/producer/priv_sk"
+    },
+    {
+      "id": "registrar",
+      "label": "Workshop registrar",
+      "mspId": "Org1MSP",
+      "role": "registrar",
+      "certPath": "/path/to/registrar/signcert.pem",
+      "keyPath": "/path/to/registrar/priv_sk"
+    }
+  ]
+}

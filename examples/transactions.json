@@ -1,0 +1,15 @@
+{
+  "note": "Example invocation order. Each value is the single JSON-string argument for its named Fabric transaction, except where indicated.",
+  "steps": [
+    {"as": "WorkshopMSP/registrar", "function": "RegisterArtisan", "args": [{"id": "artisan-04", "public": true, "publicAlias": "Ana (consented)", "skills": ["throwing", "glazing"]}]},
+    {"as": "WorkshopMSP/registrar", "function": "RegisterArtisan", "args": [{"id": "artisan-05", "public": false, "skills": ["firing"]}]},
+    {"as": "SupplierMSP/registrar", "function": "RegisterMaterial", "args": [{"id": "clay-batch-08", "materialType": "red clay", "originRegion": "Alentejo, Portugal", "supplierRef": "supplier-A", "quantityGrams": 3000, "evidenceSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}]},
+    {"as": "SupplierMSP/registrar", "function": "TransferMaterial", "args": ["clay-batch-08", "WorkshopMSP"]},
+    {"as": "WorkshopMSP/producer", "function": "CreateProduct", "args": [{"id": "vase-023", "name": "Hand-thrown ceramic vase", "category": "ceramics"}]},
+    {"as": "WorkshopMSP/producer", "function": "RecordActivity", "args": [{"id": "shaping-17", "productId": "vase-023", "stage": "shaping", "technique": "wheel-throwing", "locationCode": "workshop-A", "contributors": [{"artisanId": "artisan-04", "role": "potter"}], "materials": [{"lotId": "clay-batch-08", "quantityGrams": 800}], "evidenceSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}]},
+    {"as": "WorkshopMSP/producer", "function": "RecordActivity", "args": [{"id": "firing-09", "productId": "vase-023", "stage": "firing", "technique": "kiln firing", "locationCode": "kiln-A", "contributors": [{"artisanId": "artisan-05", "role": "kiln operator"}], "materials": [], "evidenceSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}]},
+    {"as": "WorkshopMSP/producer", "function": "PublishProduct", "args": ["vase-023"]},
+    {"as": "CraftAuthorityMSP/auditor", "function": "AttestActivity", "args": [{"activityId": "shaping-17", "verdict": "supported", "evidenceSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"}]},
+    {"as": "AuthorizedConsumer/reader", "function": "GetPassport", "args": ["vase-023"]}
+  ]
+}

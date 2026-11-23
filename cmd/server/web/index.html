@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153e38">
+  <meta name="description" content="Artisan-centred digital product passports: provenance, people and materials.">
+  <title>CraftPass Studio | Artisan-centred DPP</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script defer src="/assets/app.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#overview" aria-label="CraftPass Studio home"><span class="brand-mark">✳</span><span><b>CraftPass</b><small>STUDIO</small></span></a>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav id="nav" aria-label="Sections">
+        <button class="nav-link active" data-view="overview"><span>◫</span> Overview</button>
+        <button class="nav-link" data-view="passports"><span>▤</span> Passports</button>
+        <button class="nav-link" data-view="products"><span>◈</span> Products</button>
+        <button class="nav-link" data-view="artisans"><span>♧</span> Artisans</button>
+        <button class="nav-link" data-view="materials"><span>◉</span> Materials</button>
+        <button class="nav-link" data-view="activities"><span>⇄</span> Activities</button>
+        <button class="nav-link" data-view="attestations"><span>✓</span> Attestations</button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="status-dot" id="status-dot"></span><span id="connection-status">Connecting…</span>
+        <small>Material · Product · Artisan provenance</small>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>CRAFTPASS</span><span class="separator">/</span><strong id="location-title">Overview</strong></div>
+        <div class="header-controls">
+          <span id="mode-badge" class="mode-badge">Checking backend</span>
+          <label class="actor-selector"><span>Acting as</span><select id="actor-select" aria-label="Acting as identity"></select></label>
+          <button id="settings-btn" class="circle-button" aria-label="Connection settings" title="API authentication">⚙</button>
+        </div>
+      </header>
+      <div class="content" id="main-content" aria-live="polite">
+        <div class="loading">Loading DPP workspace…</div>
+      </div>
+      <footer class="footer"><span>CraftPass Studio · Research prototype</span><span>Blockchain records ≠ independently verified truth</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="settings-dialog" aria-label="Connection settings">
+    <form method="dialog" id="settings-form">
+      <h2>Connection settings</h2>
+      <p>For a protected server, enter its bearer token. The token is held in this browser tab only and is not stored persistently.</p>
+      <label>API bearer token <input id="token-input" type="password" placeholder="Leave blank in local demo mode" autocomplete="off"></label>
+      <div class="dialog-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="primary-button" id="save-token" value="save">Apply</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

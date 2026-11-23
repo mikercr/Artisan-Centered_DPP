@@ -1,0 +1,23 @@
+=== RUN   TestEndToEndArtisanPassportAndAuditor
+--- PASS: TestEndToEndArtisanPassportAndAuditor (0.00s)
+=== RUN   TestMaterialLineageAndConservation
+--- PASS: TestMaterialLineageAndConservation (0.00s)
+=== RUN   TestAuthorizationAndIsolation
+--- PASS: TestAuthorizationAndIsolation (0.00s)
+=== RUN   TestRejectionPreservesBalances
+--- PASS: TestRejectionPreservesBalances (0.00s)
+=== RUN   TestInputValidationAndPrivacy
+--- PASS: TestInputValidationAndPrivacy (0.00s)
+=== RUN   TestDeterministicHashExample
+--- PASS: TestDeterministicHashExample (0.00s)
+=== RUN   TestPublishingRequiresMaterialAndAttestationQueries
+--- PASS: TestPublishingRequiresMaterialAndAttestationQueries (0.00s)
+=== RUN   TestValidationOfBadIDsAndTransfers
+--- PASS: TestValidationOfBadIDsAndTransfers (0.00s)
+PASS
+coverage: 75.1% of statements
+ok  	example.com/artisan-dpp-fabric/dpp	1.031s	coverage: 75.1% of statements
+ok  	example.com/artisan-dpp-fabric/dpp	0.011s	coverage: 75.1% of statements
+
+Static checks: go vet ./dpp ./cmd/demo -- PASS
+Demo passport JSON parse -- PASS
